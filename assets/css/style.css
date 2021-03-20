@@ -1,0 +1,31 @@
+body{
+    font-size: 14px;
+    line-height: 1;
+}
+
+textarea{
+    background: transparent;
+    border: none;
+    resize: none;
+    border-left: 1px solid black;
+    padding: 8px;
+    color: #000;
+}
+
+.jumbotron{
+    text-align: center;
+    border-radius: 0;
+    padding-bottom: 0%;
+    background-color: transparent;
+    color: #000;
+}
+
+.time-block{
+    text-align: center;
+}
+
+.row{
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 2px solid grey;
+}
