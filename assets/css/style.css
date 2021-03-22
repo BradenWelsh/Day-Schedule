@@ -52,3 +52,15 @@ textarea{
     padding: 3px 5px;
     
 }
+
+.past{
+    background-color: rgb(255, 207, 207);
+
+}
+.pres{
+    background-color: rgb(251, 120, 120);
+
+}
+.future{
+    background-color: rgb(73, 187, 73);
+}
