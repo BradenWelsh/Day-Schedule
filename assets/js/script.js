@@ -14,7 +14,7 @@ let sixteen = $("#16");
 let seventeen = $("#17");
 let eightteen = $("#18");
 
-const save = $(".saveBtn");
+const saveBtn = $(".saveBtn");
 const deleteBtn = $(".deleteBtn");
 let txtDel = $("#txtDel");
 
@@ -26,15 +26,36 @@ function pPF(){
         if (cH < current){
             $(this).addClass("past");
         } 
-        else if (cH == current){
+        else if (cH === current){
             $(this).addClass("pres");
         }
         else{
             $(this).addClass("future");
         }
-
     })
-
-
-
 }
+
+function schedule(){
+    $(".time-block").each(function(){
+        let timeI = $(this).attr("id");
+        let schedule = localStorage.getItem(timeI);
+        if (schedule !== null){
+            $(this).children(".schedule").val(schedule);
+        }
+    })
+}
+
+deleteBtn.on("click", function(){
+    localStorage.clear();
+    location.reload();
+    return;
+})
+
+saveBtn.on("click", function(){
+    let time = $(this).parent().attr("id");
+    let schedule = $(this).siblings(".schedule").val();
+    localStorage.setItem(time, schedule);
+})
+
+schedule();
+pPF();
